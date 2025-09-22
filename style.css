@@ -1,0 +1,147 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: left;  /* centrer vandret */
+  align-items: left;      /* centrer lodret */
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* flot baggrund */
+  color: white;
+  text-align: left;
+  gap: 10px;
+}
+
+.site-header h1 {
+  font-size: 3em;
+  margin: 10px;
+}
+
+.site-header p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin: 10px;
+}
+
+/* Indholdsområde: velkomst + sidebar */
+.main-content {
+  display: flex;
+  gap: 10px; /* luft mellem kasserne */
+}
+
+/* Venstre kasse (velkomst) */
+.box-2 {
+  flex: 3; /* større */
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  height: fit-content;
+}
+
+.box-2 a {
+  display: block;          /* gør linket til en blok */
+  text-align: center;      /* centrér teksten */
+  margin-top: 10px;
+  color: blue;
+  text-decoration: underline;
+}
+
+
+/* Navigation liste */
+.sidebar ul {
+  list-style-position: inside; /* gør så bullets står tættere på teksten */
+  padding-left: 0px;          /* rykker hele listen ind fra venstre */
+  margin: 0;                   /* fjerner ekstra margin */
+}
+
+/* Navigation links */
+.sidebar li {
+  margin-bottom: 5px;          /* gør at punkterne ikke står for langt fra hinanden */
+  margin: 3px 0;
+  padding-left: 0;
+}
+
+.sidebar a {
+  text-decoration: none;       /* fjern understregning (valgfrit) */
+  color: blue;                 /* behold blå farve */
+}
+
+
+/* Højre kasse (sidebar) */
+.sidebar {
+  flex: 1; /* smallere */
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+
+  }
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+
+#nyheder {
+  margin-top: -140px; /* ryk hele boksen 20px op */
+  margin-left: 10px;
+}
+
+
+/* Fra min blog (hovedoverskrift) */
+#nyheder > h3 {
+  font-size: 24px;       /* stor overskrift */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;           /* mørk grå i stedet for ren sort */
+}
+
+
+/* Artikel overskrifter */
+#nyheder article h3 {
+  font-size: 18px;       /* lidt mindre end hovedoverskriften */
+  font-weight: bold;
+  margin: 10px 0 5px 0;  /* giver luft før/efter */
+  color: #222;
+}
+
+
+/* Brødtekst i artikler */
+#nyheder article p {
+  font-size: 15px;       /* normal tekst */
+  line-height: 1.6;      /* bedre læsbarhed */
+  color: #444;
+  margin-bottom: 15px;   /* afstand mellem artikler */
+}
+
+
+
+/* Sørg for at hele siden bruger flexbox */
+html, body {
+  height: 100%;          /* fyld hele skærmen */
+  margin: 0;             /* fjern standard margin */
+  display: flex;
+  flex-direction: column;/* stable elementer lodret */
+}
+
+html, body { height: 100%; margin: 0; }      /* fuld højde + fjern standard margin */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+.site-footer { margin-top: auto; }           /* skub footer helt ned */
+
+
+
+/* Main content fylder alt det resterende plads */
+main {
+  flex:auto;              /* skubber footeren ned */
+}
+
+/* Footer-styling */
+.site-footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+
+    
